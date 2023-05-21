@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Navbar() {
     return (
-        <header aria-label="Site Header" className="bg-white">
+        <header aria-label="Site Header" className="bg-none">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -30,32 +30,23 @@ export default function Navbar() {
                                         className="text-gray-500 transition hover:text-gray-500/75"
                                         href="/"
                                     >
-                                        About
+                                        Home
                                     </a>
                                 </li>
 
                                 <li>
                                     <a
                                         className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
+                                        href="/#about"
                                     >
-                                        Careers
+                                        About Us
                                     </a>
                                 </li>
 
                                 <li>
                                     <a
                                         className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        History
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
+                                        href="/#service"
                                     >
                                         Services
                                     </a>
@@ -64,24 +55,15 @@ export default function Navbar() {
                                 <li>
                                     <a
                                         className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
+                                        href="/#contact"
                                     >
-                                        Projects
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        Blog
+                                        Contact Us
                                     </a>
                                 </li>
                             </ul>
                         </nav>
 
-                        <div className="flex items-center gap-4">
+                        {/* <div className="flex items-center gap-4">
                             <div className="sm:flex sm:gap-4">
                                 <a
                                     className="rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow"
@@ -113,14 +95,14 @@ export default function Navbar() {
                                         strokeWidth="2"
                                     >
                                         <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                             d="M4 6h16M4 12h16M4 18h16"
                                         />
                                     </svg>
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

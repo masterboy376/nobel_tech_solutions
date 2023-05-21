@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer aria-label="Site Footer" className="bg-white">
+        <footer aria-label="Site Footer" className="bg-none">
             <div
                 className="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8"
             >

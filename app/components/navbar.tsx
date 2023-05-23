@@ -1,8 +1,17 @@
+"use client";
+import {useState, useEffect} from 'react'
 import Image from 'next/image'
 
+
 export default function Navbar() {
+    const [navbar, setNavbar] = useState(false);
+    const [displayFixed, setDisplayFixed] = useState(false)
+    useEffect(() => {
+        window.addEventListener("scroll", () => { window.scrollY > 80 ? setDisplayFixed(true) : setDisplayFixed(false) })
+    }, [])
+
     return (
-        <header aria-label="Site Header" className="bg-none">
+        <header aria-label="Site Header" className={`w-full ${displayFixed?'fixed':'relative'} bg-white bg-opacity-50 backdrop-blur-sm top-0 left-0 z-20`}>
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -27,7 +36,7 @@ export default function Navbar() {
                             <ul className="flex items-center gap-6 text-sm">
                                 <li>
                                     <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
+                                        className="btn-2"
                                         href="/"
                                     >
                                         Home
@@ -36,7 +45,7 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
+                                        className="btn-2"
                                         href="/#about"
                                     >
                                         About Us
@@ -45,7 +54,7 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
+                                        className="btn-2"
                                         href="/#service"
                                     >
                                         Services
@@ -54,7 +63,16 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
+                                        className="btn-2"
+                                        href="/#service"
+                                    >
+                                        Testimonials
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        className="btn-2"
                                         href="/#contact"
                                     >
                                         Contact Us

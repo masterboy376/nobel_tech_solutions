@@ -70,7 +70,7 @@ export default function Footer() {
                                     href="/"
                                     rel="noreferrer"
                                     target="_blank"
-                                    className="btn-2"
+                                    className="btn-link"
                                 >
                                     <span className="sr-only">Facebook</span>
 
@@ -94,7 +94,7 @@ export default function Footer() {
                                     href="/"
                                     rel="noreferrer"
                                     target="_blank"
-                                    className="btn-2"
+                                    className="btn-link"
                                 >
                                     <span className="sr-only">Instagram</span>
 
@@ -118,7 +118,7 @@ export default function Footer() {
                                     href="/"
                                     rel="noreferrer"
                                     target="_blank"
-                                    className="btn-2"
+                                    className="btn-link"
                                 >
                                     <span className="sr-only">Twitter</span>
 
@@ -140,7 +140,7 @@ export default function Footer() {
                                     href="/"
                                     rel="noreferrer"
                                     target="_blank"
-                                    className="btn-2"
+                                    className="btn-link"
                                 >
                                     <span className="sr-only">GitHub</span>
 
@@ -164,7 +164,7 @@ export default function Footer() {
                                     href="/"
                                     rel="noreferrer"
                                     target="_blank"
-                                    className="btn-2"
+                                    className="btn-link"
                                 >
                                     <span className="sr-only">Dribbble</span>
 
@@ -194,31 +194,31 @@ export default function Footer() {
                             <nav aria-label="Footer Navigation - Services" className="mt-6">
                                 <ul className="space-y-4 text-sm">
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             1on1 Coaching
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Company Review
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Accounts Review
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             HR Consulting
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             SEO Optimisation
                                         </a>
                                     </li>
@@ -232,19 +232,19 @@ export default function Footer() {
                             <nav aria-label="Footer Navigation - Company" className="mt-6">
                                 <ul className="space-y-4 text-sm">
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             About
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Meet the Team
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Accounts Review
                                         </a>
                                     </li>
@@ -258,19 +258,19 @@ export default function Footer() {
                             <nav aria-label="Footer Navigation - Company" className="mt-6">
                                 <ul className="space-y-4 text-sm">
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Contact
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             FAQs
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Live Chat
                                         </a>
                                     </li>
@@ -284,25 +284,25 @@ export default function Footer() {
                             <nav aria-label="Footer Navigation - Legal" className="mt-6">
                                 <ul className="space-y-4 text-sm">
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Accessibility
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Returns Policy
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Refund Policy
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="btn-2">
+                                        <a href="#" className="btn-link">
                                             Hiring Statistics
                                         </a>
                                     </li>
@@ -313,7 +313,7 @@ export default function Footer() {
                 </div>
 
                 <p className="text-xs text-gray-500">
-                    &copy; 2022. Company Name. All rights reserved.
+                    &copy; 2023. Nobel Tech Solutions. All rights reserved.
                 </p>
             </div>
         </footer>

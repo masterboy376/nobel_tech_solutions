@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 @layer components{
-  .btn-2{
-    @apply text-gray-700 transition hover:opacity-75
+  /* buttons */
+  .btn-primary{
+    @apply text-gray-700 transition hover:opacity-75;
+  }
+  .btn-secondary{
+    @apply text-gray-700 transition hover:opacity-75;
+  }
+  .btn-link{
+    @apply text-gray-700 transition hover:opacity-75;
+  }
+
+  /* section */
+  .section-container{
+    @apply min-w-full min-h-screen;
   }
 }
 
@@ -13,12 +25,18 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 255, 255, 255;
     --background-end-rgb: 255, 255, 255;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }
 

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Nobel Tech Solutions',
-  description: 'NObel Tech Solutions provide technical assistance and solutions to bussinesses to help them grow.',
+  description: 'Nobel Tech Solutions provide technical assistance and solutions to bussinesses to help them grow.',
 }
 
 export default function RootLayout({

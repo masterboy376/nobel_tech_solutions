@@ -36,8 +36,8 @@ export default function Navbar() {
                             <ul className="flex items-center gap-6 text-sm">
                                 <li>
                                     <a
-                                        className="btn-2"
-                                        href="/"
+                                        className="btn-link"
+                                        href="/#"
                                     >
                                         Home
                                     </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="btn-2"
+                                        className="btn-link"
                                         href="/#about"
                                     >
                                         About Us
@@ -54,7 +54,7 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="btn-2"
+                                        className="btn-link"
                                         href="/#service"
                                     >
                                         Services
@@ -63,8 +63,8 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="btn-2"
-                                        href="/#service"
+                                        className="btn-link"
+                                        href="/#testimonial"
                                     >
                                         Testimonials
                                     </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
 
                                 <li>
                                     <a
-                                        className="btn-2"
+                                        className="btn-link"
                                         href="/#contact"
                                     >
                                         Contact Us

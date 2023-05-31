@@ -1,5 +1,5 @@
 "use client";
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 
@@ -11,9 +11,9 @@ export default function Navbar() {
     }, [])
 
     return (
-        <header aria-label="Site Header" className={`w-full ${displayFixed?'fixed':'relative'} bg-white bg-opacity-50 backdrop-blur-sm top-0 left-0 z-20`}>
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
+        <header aria-label="Site Header" className={`w-full ${displayFixed ? 'fixed shadow-md' : 'relative shadow-none'} bg-white bg-opacity-50 backdrop-blur-sm top-0 left-0 z-20`}>
+            <div className="w-full flex">
+                <div className="px-4 mx-auto container flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
                         <a className="block text-blue-500" href="/">
                             <span className="sr-only">Home</span>
@@ -80,50 +80,75 @@ export default function Navbar() {
                                 </li>
                             </ul>
                         </nav>
-
-                        {/* <div className="flex items-center gap-4">
-                            <div className="sm:flex sm:gap-4">
-                                <a
-                                    className="rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow"
-                                    href="/"
-                                >
-                                    Login
-                                </a>
-
-                                <div className="hidden sm:flex">
-                                    <a
-                                        className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-blue-500"
-                                        href="/"
-                                    >
-                                        Register
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="block md:hidden">
-                                <button
-                                    className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M4 6h16M4 12h16M4 18h16"
-                                        />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div> */}
+                        <button onClick={
+                            () => { setNavbar(!navbar) }
+                        } className='block md:hidden'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+                                <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
+
             </div>
+
+            {navbar && <ul className='flex flex-col items-center justify-center'>
+                    <li onClick={()=>{
+                        setNavbar(!navbar)
+                    }} className="py-2">
+                        <a
+                            className="btn-link"
+                            href="/#"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li onClick={()=>{
+                        setNavbar(!navbar)
+                    }} className="py-2">
+                        <a
+                            className="btn-link"
+                            href="/#about"
+                        >
+                            About Us
+                        </a>
+                    </li>
+
+                    <li onClick={()=>{
+                        setNavbar(!navbar)
+                    }} className="py-2">
+                        <a
+                            className="btn-link"
+                            href="/#service"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li onClick={()=>{
+                        setNavbar(!navbar)
+                    }} className="py-2">
+                        <a
+                            className="btn-link"
+                            href="/#testimonial"
+                        >
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li onClick={()=>{
+                        setNavbar(!navbar)
+                    }} className="py-2">
+                        <a
+                            className="btn-link"
+                            href="/#contact"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>}
+
         </header>
     )
 }

@@ -5,10 +5,10 @@
 @layer components{
   /* buttons */
   .btn-primary{
-    @apply text-gray-700 transition hover:opacity-75;
+    @apply text-white inline-flex transition bg-blue-500 hover:bg-blue-600 rounded text-base focus:outline-none border-0;
   }
   .btn-secondary{
-    @apply text-gray-700 transition hover:opacity-75;
+    @apply text-gray-700 inline-flex transition bg-gray-100 hover:bg-gray-200 rounded-md text-base focus:outline-none border-0;
   }
   .btn-link{
     @apply text-gray-700 transition hover:opacity-75;

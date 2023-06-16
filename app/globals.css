@@ -5,10 +5,10 @@
 @layer components{
   /* buttons */
   .btn-primary{
-    @apply text-white inline-flex transition bg-blue-500 hover:bg-blue-600 rounded text-base focus:outline-none border-0;
+    @apply text-white inline-flex items-center justify-center transition bg-blue-500 hover:bg-blue-600 border border-blue-500 hover:border-blue-600 rounded text-base focus:outline-none;
   }
   .btn-secondary{
-    @apply text-gray-700 inline-flex transition bg-gray-100 hover:bg-gray-200 rounded-md text-base focus:outline-none border-0;
+    @apply text-gray-700 inline-flex items-center justify-center transition bg-gray-200 hover:bg-gray-300 border border-gray-200 hover:border-gray-300 rounded text-base focus:outline-none;
   }
   .btn-link{
     @apply text-gray-700 transition hover:opacity-75;

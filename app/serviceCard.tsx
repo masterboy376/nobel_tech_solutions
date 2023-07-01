@@ -1,24 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface Props{
+interface Props {
     title: string;
+    description: string;
 }
 
-function ServiceCard({ title }: Props) {
+function ServiceCard({ title, description }: Props) {
     return (
         <>
-            <div className="p-2 sm:w-1/2 w-full">
-                <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="text-blue-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                        <path d="M22 4L12 14.01l-3-3"></path>
-                    </svg>
-                    <span className="title-font font-medium">{title}</span>
-                </div>
-            </div>
+            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <h2 className="text-xl font-medium title-font text-gray-900 mt-5">{title}</h2>
+                <p className="text-base leading-relaxed mt-2">{description}</p>
+              </div>
         </>
     )
 }
-  
-  export default ServiceCard
+
+export default ServiceCard

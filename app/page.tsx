@@ -1,8 +1,22 @@
+"use client";
 import Image from 'next/image'
 import Link from 'next/link'
-import ServiceCard from './serviceCard'
+import ServiceCard from './components/serviceCard'
+import { useState } from 'react'
 
 export default function Home() {
+
+  const [formDetails, setFormDetails] = useState({ name: '', email: '', number: '', location: '', message: '', 'g-recaptcha-response': '' })
+
+  const onChange = (e: any) => {
+    setFormDetails({ ...formDetails, [e.target.name]: e.target.value })
+  }
+
+  const onSubmit = async (e: any) => {
+    e.preventDefault()
+    console.log(formDetails)
+  }
+
   return (
     <>
       {/* home */}
@@ -37,14 +51,14 @@ export default function Home() {
       <section id='service' className='section-container'>
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto">
-          <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Services We Provide</h1>
+            <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Services We Provide</h1>
             <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
-              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual'/>
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
+              <ServiceCard title='Ad campaign' description='Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual' />
             </div>
           </div>
         </section>
@@ -69,7 +83,7 @@ export default function Home() {
       <section id='testimonial' className='section-container'>
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto">
-          <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Testimonials</h1>
+            <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Testimonials</h1>
             <div className="flex flex-wrap -m-4">
               <div className="p-4 md:w-1/2 w-full">
                 <div className="h-full bg-gray-100 p-8 rounded">
@@ -109,50 +123,51 @@ export default function Home() {
       {/* contact */}
       <section id='contact' className='section-container'>
         <section className="text-gray-600 body-font relative">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Contact Us</h1>
-              
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Fields marked with * are required.</p>
-            </div>
-            <div className="lg:w-1/2 md:w-2/3 mx-auto">
-              <div className="flex flex-wrap -m-2">
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name *</label>
-                    <input type="text" id="name" name="name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required/>
+          <form id="contactForm" onSubmit={onSubmit}>
+            <div className="container px-5 py-24 mx-auto">
+              <div className="flex flex-col text-center w-full mb-12">
+                <h1 className="title-font sm:text-4xl text-3xl font-medium mb-6 text-center">Contact Us</h1>
+                <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Fields marked with * are required.</p>
+              </div>
+              <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                <div className="flex flex-wrap -m-2">
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="name" className="leading-7 text-sm text-gray-600">Full Name *</label>
+                      <input onChange={onChange} type="text" id="name" name="name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                    </div>
                   </div>
-                </div>
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email *</label>
-                    <input type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required/>
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email *</label>
+                      <input onChange={onChange} type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                    </div>
                   </div>
-                </div>
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label htmlFor="number" className="leading-7 text-sm text-gray-600">Contact number</label>
-                    <input type="number" id="number" name="number" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="number" className="leading-7 text-sm text-gray-600">Contact number *</label>
+                      <input onChange={onChange} type="number" id="number" name="number" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                    </div>
                   </div>
-                </div>
-                <div className="p-2 w-1/2">
-                  <div className="relative">
-                    <label htmlFor="city" className="leading-7 text-sm text-gray-600">City *</label>
-                    <input type="text" id="city" name="city" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required/>
+                  <div className="p-2 w-1/2">
+                    <div className="relative">
+                      <label htmlFor="location" className="leading-7 text-sm text-gray-600">Location (city, country) *</label>
+                      <input onChange={onChange} type="text" id="location" name="location" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                    </div>
                   </div>
-                </div>
-                <div className="p-2 w-full">
-                  <div className="relative">
-                    <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message *</label>
-                    <textarea id="message" name="message" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+                  <div className="p-2 w-full">
+                    <div className="relative">
+                      <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message *</label>
+                      <textarea onChange={onChange} id="message" name="message" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+                    </div>
                   </div>
-                </div>
-                <div className="p-2 w-full">
-                <button type='submit' className="btn-primary py-1 px-3 w-full">Submit Form</button>
+                  <div className="p-2 w-full">
+                    <button type='submit' className="btn-primary py-1 px-3 w-full">Submit Form</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </section>
       </section>
     </>
